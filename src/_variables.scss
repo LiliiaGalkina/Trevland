@@ -1,0 +1,32 @@
+/*переменные*/
+$textColorDark : #000000;
+$textColorWhite: #FFFFFF;
+$buttonColorBackground: #C9453B;
+
+
+
+/*миксины*/
+@mixin button($width, $height) {
+    width: $width;
+    height: $height;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: 1.6rem;
+    line-height: 150%;
+    border-radius: 0.5rem;
+    background-color: #C9453B;
+    color: #FFFFFF;
+    transition: all 0.5s ease;
+    &:hover {
+        transform: scale(1.01);
+    }
+}
+
+@mixin title($fontSize, $lineHeight, $fontWeight){
+    font-family: "Gelasio", serif;
+    font-size: $fontSize;
+    line-height: $fontWeight;
+    font-weight: $fontWeight;
+}

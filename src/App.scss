@@ -1,0 +1,106 @@
+@use "./variables" as *;
+@import url("https://fonts.googleapis.com/css2?family=Gelasio&family=Ribeye&family=Roboto:wght@100..900&display=swap");
+
+html {
+  font-size: 10px;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  font-size: 1.8rem;
+  line-height: 150%;
+  color: $textColorDark;
+}
+
+.container {
+  max-width: 117rem;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+/*header*/
+.header {
+  position: relative;
+  padding: 3.5rem 0;
+  z-index: 2;
+  color: $textColorWhite;
+
+  &__logo {
+    font-family: "Ribeye", serif;
+    font-size: 2.4rem;
+  }
+
+  &__items {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2rem;
+  }
+
+  &__button {
+    @include button(16.3rem, 5.1rem);
+  }
+}
+
+.menu {
+  &__list {
+    display: flex;
+    align-items: center;
+    gap: 5rem;
+  }
+
+  &__link {
+    transition: all 0.5s ease;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
+
+/*main*/
+.main {
+    height: 100%;
+}
+/*hero*/
+.hero {
+  padding: 3.5rem 0;
+  color: $textColorWhite;
+
+
+  &__fon {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 90rem;
+    
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  &__fon-dark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  &__title-block {
+    position: relative;
+    z-index: 3;
+  }
+
+  &__title {
+  @include title(6.5rem, 120%, 700)
+  }
+}
