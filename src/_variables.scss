@@ -1,57 +1,65 @@
 /*переменные*/
-$textColorDark : #000000;
-$textColorWhite: #FFFFFF;
-$buttonColorBackground: #C9453B;
-
-
+$textColorDark: #000000;
+$textColorWhite: #ffffff;
+$buttonColorBackground: #c9453b;
 
 /*миксины*/
 @mixin button($width, $height) {
-    width: $width;
-    height: $height;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    font-size: 1.6rem;
-    line-height: 150%;
-    border-radius: 0.5rem;
-    background-color: #C9453B;
-    color: #FFFFFF;
-    transition: all 0.5s ease;
-    &:hover {
-        transform: scale(1.01);
-    }
+  width: $width;
+  height: $height;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-size: 1.6rem;
+  line-height: 150%;
+  border-radius: 0.5rem;
+  background-color: #c9453b;
+  color: #ffffff;
+  transition: all 0.5s ease;
+  &:hover {
+    transform: scale(1.01);
+  }
 }
 
-@mixin title($fontSize, $lineHeight, $fontWeight){
-    font-family: "Gelasio", serif;
-    font-size: $fontSize;
-    line-height:  $lineHeight;
-    font-weight: $fontWeight;
+@mixin title($fontSize, $lineHeight, $fontWeight) {
+  font-family: "Gelasio", serif;
+  font-size: $fontSize;
+  line-height: $lineHeight;
+  font-weight: $fontWeight;
 }
 
 @mixin menu {
-    position: absolute;
-    z-index: 7;
-    display: block;
-    overflow: auto;
-    top: 0;
-    left: 0;
-    background-color: $buttonColorBackground;
-    width: 100vw;
-    height: 100vh;
-    padding-top: 10rem;
-    text-align: center;
-    transition: all 1s ease;
-    .menu__item {
-      &:not(:last-child) {
-        margin-right: 0;
-        margin-bottom: 4rem;
-      }
+  position: absolute;
+  z-index: 7;
+  display: block;
+  overflow: auto;
+  top: 0;
+  left: 0;
+  background-color: $buttonColorBackground;
+  width: 100vw;
+  height: 100vh;
+  padding-top: 10rem;
+  text-align: center;
+  transition: all 1s ease;
+  .menu__item {
+    &:not(:last-child) {
+      margin-right: 0;
+      margin-bottom: 4rem;
     }
-    .menu__link {
-      font-size: 2.5rem;
-      color: $textColorWhite;
-    }
+  }
+  .menu__link {
+    font-size: 2.5rem;
+    color: $textColorWhite;
+  }
+}
+
+@mixin burger($top, $right) {
+  display: block;
+  position: absolute;
+  top: $top;
+  right: $right;
+  width: 4rem;
+  height: 3rem;
+  
 }

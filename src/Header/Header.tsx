@@ -13,10 +13,7 @@ const Header = () => {
           </a>
           <nav className="header__menu menu">
             <div
-              id="burger"
-              className={`menu__burger ${
-                isMenuOpen ? "menu__burger_active" : ""
-              }`}
+              className="menu__burger"
               onClick={() => setIsMenuOpen(!isMenuOpen)}
             >
               <span></span>
@@ -50,6 +47,12 @@ const Header = () => {
                   Contact
                 </a>
               </li>
+              <div
+                className= "menu__burger_active"
+                onClick={() => setIsMenuOpen(!isMenuOpen)}
+              >
+                <span></span><span></span>
+              </div>
             </ul>
           </nav>
           <Button textButton="Booking now" classButton="header__button" />

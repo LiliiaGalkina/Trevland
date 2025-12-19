@@ -97,65 +97,62 @@ body {
     }
   }
 
-  .menu__list {
-    @include menu;
-    transform: translate3d(-100vw, 0, 0);
+  .menu {
+    &__list {
+      @include menu;
+      transform: translate3d(-100vw, 0, 0);
+    }
+    &__burger {
+      @include burger(4.3rem, 1.5rem);
+      span {
+        position: absolute;
+        background-color: $textColorWhite;
+        left: 0;
+        top: 1.4rem;
+        width: 100%;
+        height: 0.3rem;
+        transition: all 0.3s ease 0s;
+      }
+      &::before,
+      &::after {
+        content: "";
+        background-color: $textColorWhite;
+        position: absolute;
+        width: 100%;
+        height: 0.3rem;
+        left: 0;
+        transition: all 0.3s ease 0s;
+      }
+	  &::before {
+		 top: 0;
+	  }
+	  &::after {
+		bottom: 0;
+	  }
+    }
   }
 
-  .menu__burger {
-    display: block;
-    position: absolute;
-    top: 4.3rem;
-    right: 1.5rem;
-    width: 4rem;
-    height: 3rem;
+  .menu__burger_active {
+    @include burger(4.3rem, 1.5rem);
     z-index: 8;
-    transition: all 0.5s ease;
-  }
-
-  .menu__burger span {
-    position: absolute;
-    background-color: $textColorWhite;
-    left: 0;
-    top: 1.4rem;
-    width: 100%;
-    height: 0.3rem;
-    transition: all 0.3s ease 0s;
-  }
-
-  .menu__burger::before,
-  .menu__burger::after {
-    content: "";
-    background-color: $textColorWhite;
-    position: absolute;
-    width: 100%;
-    height: 0.3rem;
-    left: 0;
-    transition: all 0.3s ease 0s;
-  }
-
-  .menu__burger::before {
-    top: 0;
-  }
-
-  .menu__burger::after {
-    bottom: 0;
-  }
-
-  .menu__burger_active span {
-    transform: scale(0);
-  }
-
-  .menu__burger_active::before {
-    background-color: $textColorWhite;
-    transform: rotate(45deg);
-    top: 1.9rem;
-  }
-
-  .menu__burger_active::after {
-    background-color: $textColorWhite;
-    transform: rotate(-45deg);
-    bottom: 0.8rem;
+    span:first-child {
+      position: absolute;
+      background-color: $textColorWhite;
+      left: 0;
+      top: 1.4rem;
+      width: 100%;
+      height: 0.3rem;
+      transform: rotate(45deg);
+    }
+    span:last-child {
+      position: absolute;
+      background-color: $textColorWhite;
+      left: 0;
+      top: 1.4rem;
+      width: 100%;
+      height: 0.3rem;
+      transform: rotate(-45deg);
+    }
   }
 
   .menu__list_active {
