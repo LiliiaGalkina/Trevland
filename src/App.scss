@@ -8,7 +8,7 @@ html {
 body {
   font-family: "Roboto", sans-serif;
   font-size: 1.8rem;
-  line-height: 150%;
+  line-height: 160%;
   color: $textColorDark;
 }
 
@@ -22,10 +22,11 @@ body {
 .header {
   position: relative;
   padding: 3.5rem 0;
-  z-index: 2;
+  z-index: 5;
   color: $textColorWhite;
 
   &__logo {
+    margin-right: 3rem;
     font-family: "Ribeye", serif;
     font-size: 2.4rem;
   }
@@ -37,6 +38,10 @@ body {
     gap: 2rem;
   }
 
+  &__menu {
+    margin-right: 3rem;
+  }
+
   &__button {
     @include button(16.3rem, 5.1rem);
   }
@@ -44,6 +49,8 @@ body {
 
 .menu {
   &__list {
+    position: relative;
+    z-index: 7;
     display: flex;
     align-items: center;
     gap: 5rem;
@@ -58,15 +65,150 @@ body {
   }
 }
 
-/*main*/
-.main {
-    height: 100%;
+@media (max-width: 1024px) {
+  .header {
+    &__button {
+      @include button(14rem, 4.8rem);
+    }
+  }
+  .menu {
+    &__list {
+      gap: 2rem;
+    }
+  }
 }
+
+@media (max-width: 768px) {
+  .header {
+    &__items {
+      flex-wrap: wrap;
+    }
+  }
+}
+
+@media (max-width: 600px) {
+  .header {
+    &__items {
+      flex-wrap: nowrap;
+    }
+
+    &__button {
+      margin-right: 6rem;
+    }
+  }
+  .menu__list {
+    display: none;
+  }
+
+  .menu__burger {
+    display: block;
+    position: absolute;
+    top: 4.3rem;
+    right: 1.5rem;
+    width: 4rem;
+    height: 3rem;
+    z-index: 8;
+    transition: all 0.5s ease;
+  }
+
+  .menu__burger span {
+    position: absolute;
+    background-color: $textColorWhite;
+    left: 0;
+    top: 1.4rem;
+    width: 100%;
+    height: 0.3rem;
+    transition: all 0.3s ease 0s;
+  }
+
+  .menu__burger::before,
+  .menu__burger::after {
+    content: "";
+    background-color: $textColorWhite;
+    position: absolute;
+    width: 100%;
+    height: 0.3rem;
+    left: 0;
+    transition: all 0.3s ease 0s;
+  }
+
+  .menu__burger::before {
+    top: 0;
+  }
+
+  .menu__burger::after {
+    bottom: 0;
+  }
+
+  .menu__burger_active span {
+    transform: scale(0);
+  }
+
+  .menu__burger_active::before {
+    background-color: $textColorWhite;
+    transform: rotate(45deg);
+    top: 1.9rem;
+  }
+
+  .menu__burger_active::after {
+    background-color: $textColorWhite;
+    transform: rotate(-45deg);
+    bottom: 0.8rem;
+  }
+
+  .menu__list_active {
+    position: absolute;
+    z-index: 7;
+    display: block;
+    overflow: auto;
+    top: 0;
+    left: 0;
+    background-color: $buttonColorBackground;
+    width: 100vw;
+    height: 100vh;
+    padding-top: 10rem;
+    text-align: center;
+    transition: all 0.5s ease;
+    .menu__item {
+      &:not(:last-child) {
+        margin-right: 0;
+        margin-bottom: 4rem;
+      }
+    }
+    .menu__link {
+      font-size: 2.5rem;
+      color: $textColorWhite;
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  .header {
+    &__items {
+      flex-wrap: wrap;
+      justify-content: flex-start;
+      gap: 2rem 0;
+    }
+
+    &__logo {
+      width: 100%;
+    }
+
+    &__menu {
+      margin-right: 0;
+    }
+
+    &__button {
+      @include button(12rem, 4rem);
+    }
+  }
+}
+
+/*main*/
 /*hero*/
 .hero {
-  padding: 3.5rem 0;
+  padding: 20rem 0 3.5rem;
   color: $textColorWhite;
-
 
   &__fon {
     position: absolute;
@@ -74,12 +216,8 @@ body {
     left: 0;
     width: 100%;
     height: 90rem;
-    
-    img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-    }
+    overflow: hidden;
+    z-index: -1;
   }
 
   &__fon-dark {
@@ -87,6 +225,9 @@ body {
     top: 0;
     left: 0;
     width: 100%;
+    height: 90rem;
+    z-index: 3;
+    overflow: hidden;
 
     img {
       width: 100%;
@@ -95,12 +236,104 @@ body {
     }
   }
 
+  &__fon-img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 90rem;
+    z-index: 2;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: right;
+    }
+  }
+
   &__title-block {
-    position: relative;
-    z-index: 3;
+    height: 100%;
   }
 
   &__title {
-  @include title(6.5rem, 120%, 700)
+    @include title(6.5rem, 120%, 700);
+    margin-bottom: 3rem;
+  }
+
+  &__text {
+    margin-bottom: 4rem;
+    max-width: 45.8rem;
+  }
+
+  &__button {
+    @include button(18.7rem, 5.9rem);
+  }
+}
+
+@media (max-width: 1024px) {
+  .hero {
+    padding: 15rem 0 3.5rem;
+    &__fon {
+      height: 70rem;
+    }
+
+    &__fon-img {
+      height: 70rem;
+    }
+
+    &__title {
+      font-size: 4.8rem;
+    }
+
+    &__button {
+      @include button(14rem, 4.8rem);
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .hero {
+    padding: 9rem 0 3.5rem;
+    &__fon,
+    &__fon-img {
+      height: 60rem;
+    }
+
+    &__title {
+      font-size: 4rem;
+    }
+
+    &__text {
+      max-width: 40rem;
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  .hero {
+    padding: 5rem 0 3.5rem;
+
+    &__title {
+      margin-bottom: 2rem;
+      font-size: 3.2rem;
+    }
+
+    &__text {
+      margin-bottom: 2rem;
+      font-size: 1.6rem;
+    }
+
+    &__button {
+      @include button(12rem, 4rem);
+    }
+  }
+}
+
+@media (max-width: 375px) {
+  .hero {
+    &__title {
+      font-size: 3rem;
+    }
   }
 }

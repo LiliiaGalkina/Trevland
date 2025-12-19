@@ -27,6 +27,6 @@ $buttonColorBackground: #C9453B;
 @mixin title($fontSize, $lineHeight, $fontWeight){
     font-family: "Gelasio", serif;
     font-size: $fontSize;
-    line-height: $fontWeight;
+    line-height:  $lineHeight;
     font-weight: $fontWeight;
 }
