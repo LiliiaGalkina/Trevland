@@ -78,15 +78,8 @@ body {
   }
 }
 
-@media (max-width: 768px) {
-  .header {
-    &__items {
-      flex-wrap: wrap;
-    }
-  }
-}
 
-@media (max-width: 600px) {
+@media (max-width: 768px) {
   .header {
     &__items {
       flex-wrap: nowrap;
@@ -123,12 +116,12 @@ body {
         left: 0;
         transition: all 0.3s ease 0s;
       }
-	  &::before {
-		 top: 0;
-	  }
-	  &::after {
-		bottom: 0;
-	  }
+      &::before {
+        top: 0;
+      }
+      &::after {
+        bottom: 0;
+      }
     }
   }
 
@@ -184,8 +177,30 @@ body {
 }
 
 /*main*/
+.section-title {
+  @include title(4.3rem, 140%, 500);
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.section-text {
+  margin: 0 auto 5rem;
+  max-width: 73.5rem;
+  text-align: center;
+}
+
+@media (max-width: 480px) {
+  .section-title {
+    font-size: 4rem;
+  }
+  .section-text {
+    max-width: 35rem;
+  }
+}
+
 /*hero*/
 .hero {
+  height: 77.9rem;
   padding: 20rem 0 3.5rem;
   color: $textColorWhite;
 
@@ -252,6 +267,7 @@ body {
 
 @media (max-width: 1024px) {
   .hero {
+	height: 57.9rem;
     padding: 15rem 0 3.5rem;
     &__fon {
       height: 70rem;
@@ -273,6 +289,7 @@ body {
 
 @media (max-width: 768px) {
   .hero {
+	height: 47.9rem;
     padding: 9rem 0 3.5rem;
     &__fon,
     &__fon-img {
@@ -315,4 +332,77 @@ body {
       font-size: 3rem;
     }
   }
+}
+
+/*Popular Location*/
+.popular-location {
+  padding: 14rem 0 7rem;
+
+  &__items {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 3rem;
+  }
+}
+
+.location-cart {
+  display: flex;
+  flex-direction: column;
+  justify-content: stretch;
+  border: 0.1rem solid $popularItemBorderColor;
+  border-radius: 1rem;
+  text-align: center;
+  box-shadow: 0 0.6rem 3.5rem $popularItemBoxShadow;
+
+  &__img {
+    width: 100%;
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  &__info {
+    padding: 3.5rem 2.7rem 3.3rem;
+  }
+
+  &__title {
+    @include title(2.4rem, 150%, 500);
+    margin-bottom: 1rem;
+  }
+}
+
+@media (max-width: 1090px) {
+  .popular-location {
+	  padding: 10rem 0 7rem;
+    &__items {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+}
+
+@media (max-width: 768px) {
+	.popular-location {
+		padding: 8rem 0 7rem;
+	}
+}
+
+@media (max-width: 600px) {
+  .popular-location {
+    &__items {
+      grid-template-columns: 1fr;
+    }
+  }
+}
+
+@media (max-width: 480px) {
+	.popular-location {
+		padding: 4rem 0 7rem;
+	}
+	.location-cart {
+		&__info {
+			padding: 2rem 1.5rem;
+		}
+	}
 }
