@@ -10,11 +10,11 @@ const PopularLocation = () => {
           For every one of us, travel came first. We’ve spent years living as
           nomads, pioneers, and voyagers— from island hopping in the
         </p>
-			  <div className="popular-location__items">
-				  {popularItems.map((popularItem) => (
-					  <PopularLocationItem key={popularItem.id} {...popularItem} />
-				  ))}
-		</div>
+        <div className="popular-location__items">
+          {popularItems.map((popularItem) => (
+            <PopularLocationItem key={popularItem.id} {...popularItem} />
+          ))}
+        </div>
       </div>
     </section>
   );
