@@ -413,14 +413,19 @@ body {
   padding: 7rem 0 14rem;
 
   &__slider {
-    padding: 0 1rem;
+    padding: 1rem;
   }
+}
+
+.slick-slider {
+  height: 99% !important;
 }
 
 .card-special {
  margin: 0 2rem;
   border-radius: 1rem;
   box-shadow: 0 0.6rem 3.5rem $popularItemBoxShadow;
+  overflow: hidden;
   cursor: pointer;
 
   &__img {
@@ -495,5 +500,17 @@ body {
     margin: 0 0.5rem;
   }
 }
+
+@media (max-width: 320px) {
+  .slick-dots {
+  bottom: -8rem !important;
+
+  li {
+    width: 1.5rem !important;
+  }
+}
+}
+
+
 
 
