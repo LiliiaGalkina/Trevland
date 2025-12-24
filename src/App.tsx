@@ -1,6 +1,8 @@
 import './App.scss';
 import Header from './Header/Header';
-import Main from './Main/main';
+import Main from './Main/Main';
+import Footer from './Footer/Footer';
+
 
 
 function App() {
@@ -10,6 +12,7 @@ function App() {
     <>
       <Header/>
       <Main/>
+      <Footer/>
     </>
   )
 }

@@ -606,3 +606,88 @@ body {
     gap: 2rem;
   }
 }
+
+/*footer*/
+.footer {
+  padding: 7rem 0 10rem;
+  background-color: $footerColorBackground;
+
+  &__items {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2rem;
+  }
+}
+
+.info-footer {
+  &__logo {
+    margin-bottom: 4rem;
+    display: block;
+    font-family: "Ribeye", serif;
+    font-size: 2.4rem;
+  }
+
+  &__link {
+    margin-bottom: 2rem;
+    font-size: 1.6rem;
+    letter-spacing: 6%;
+    span {
+      display: block;
+      margin-bottom: 1rem;
+    }
+  }
+}
+
+.social-footer {
+  display: flex;
+  align-items: center;
+  gap: 2.7rem;
+}
+
+.menu-footer {
+  display: flex;
+  align-items: start;
+  gap: 12rem;
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  &__link {
+    font-size: 1.6rem;
+    letter-spacing: 6%;
+    transition: all 0.5s ease;
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
+
+.form-footer {
+  &__title {
+    margin-bottom: 4.2rem;
+    font-size: 2rem;
+    font-weight: 500;
+    letter-spacing: 6%;
+  }
+
+  &__block {
+    display: flex;
+    gap: 3.5rem;
+  }
+
+  &__input {
+    padding: 1rem 2rem;
+    font-size: 1.6rem;
+    border: 0.1rem solid $popularItemBorderColor;
+    border-radius: 0.5rem;
+    background-color: transparent
+  }
+
+  button {
+    @include button(10.3rem, 4.4rem);
+  }
+}
