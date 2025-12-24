@@ -1,6 +1,7 @@
 import Hero from "./Hero";
 import PopularLocation from "./PopularLocation";
 import SpecialOffersSlider from "./SpecialOffersSlider";
+import News from "./News";
 
 const Main = () => {
     return (
@@ -8,6 +9,7 @@ const Main = () => {
 			<Hero />
 			<PopularLocation />
 			<SpecialOffersSlider/>
+            <News/>
         </main>
     )
 }

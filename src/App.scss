@@ -186,8 +186,8 @@ body {
   margin: 0 auto 5rem;
   max-width: 73.5rem;
   text-align: center;
+  opacity: 0.6;
 }
-
 
 @media (max-width: 480px) {
   .section-title {
@@ -197,7 +197,6 @@ body {
     max-width: 35rem;
   }
 }
-
 
 /*hero*/
 .hero {
@@ -422,7 +421,7 @@ body {
 }
 
 .card-special {
- margin: 0 2rem;
+  margin: 0 2rem;
   border-radius: 1rem;
   box-shadow: 0 0.6rem 3.5rem $popularItemBoxShadow;
   overflow: hidden;
@@ -484,7 +483,6 @@ body {
   li {
     button::before {
       color: $buttonColorBackground !important;
-
     }
   }
 }
@@ -503,14 +501,108 @@ body {
 
 @media (max-width: 320px) {
   .slick-dots {
-  bottom: -8rem !important;
+    bottom: -8rem !important;
 
-  li {
-    width: 1.5rem !important;
+    li {
+      width: 1.5rem !important;
+    }
   }
 }
+
+/*news*/
+.news {
+  padding: 7rem 0 14rem;
+
+  &__items {
+    display: flex;
+    gap: 3.2rem;
+  }
+
+  &__item-left {
+    flex: 0 1 60%;
+    .card-news {
+      flex-direction: column;
+      gap: 3.5rem;
+    }
+  }
+
+  &__item-right {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+  }
 }
 
+.card-news {
+  display: flex;
+  gap: 2.7rem;
 
+  &__img {
+    img {
+      width: 100%;
+    }
+  }
 
+  &__title {
+    @include title(2rem, 160%, 500);
+    margin-bottom: 1rem;
+  }
 
+  &__text {
+    margin-bottom: 1rem;
+    opacity: 0.6;
+  }
+
+  &__link {
+    font-size: 2rem;
+    font-weight: 500;
+  }
+}
+
+@media (max-width: 1024px) {
+  .news {
+    padding: 5rem 0 10rem;
+    &__items {
+      gap: 4rem;
+    }
+
+    &__item-left {
+      .card-news {
+        gap: 2rem;
+      }
+    }
+  }
+
+  .card-news {
+    &__text {
+      font-size: 1.6rem;
+    }
+
+    &__link {
+      font-size: 1.8rem;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .news {
+    padding: 3rem 0 10rem;
+    &__items {
+      flex-direction: column;
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  .news {
+    padding: 1rem 0 8rem;
+
+    &__item-right {
+      gap: 4rem;
+    }
+  }
+  .card-news {
+    flex-direction: column;
+    gap: 2rem;
+  }
+}

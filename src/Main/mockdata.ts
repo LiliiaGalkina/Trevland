@@ -124,3 +124,38 @@ export const specialOffersItems = [
     price: "$700",
   },
 ];
+
+export const newsItems = [
+  {
+    id: 1,
+    imgurl: "/image/news-banff.png",
+    imgalt: "озеро, окруженное с одной стороны горами, с другой лесами",
+    title: "Banff National Park",
+    text: "Banff National Park lies in the heart of the majestic Rocky Mountains in the province of Alberta, and showcases some of Canada's most beautiful scenery. Turquoise-colored lakes, snow-capped peaks, and glaciers are all easily accessible.",
+    link: "@thomasalva_adison",
+  },
+  {
+    id: 2,
+    imgurl: "/image/news-hirosima.png",
+    imgalt: "на берегу реки стоит полуразрушенное здание",
+    title: "The Hiroshima Peace!",
+    text: "It was formally opened to the public in August that year.",
+    link: "@shova_bd88",
+  },
+  {
+    id: 3,
+    imgurl: "/image/news-faithful.png",
+    imgalt: "вид на священный город в Индии",
+    title: "The faithful prayers!",
+    text: "A major pilgrimage center for Hindus, the holy city.",
+    link: "@adem/smith",
+  },
+  {
+    id: 4,
+    imgurl: "public/image/news-waters.png",
+    imgalt: "очень красивое озеро, окруженное горами",
+    title: "Colourful waters!",
+    text: "Forest-driven water and energy cycles are poorly.",
+    link: "@jhon7leew",
+  }
+];
