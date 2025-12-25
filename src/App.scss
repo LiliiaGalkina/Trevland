@@ -684,10 +684,76 @@ body {
     font-size: 1.6rem;
     border: 0.1rem solid $popularItemBorderColor;
     border-radius: 0.5rem;
-    background-color: transparent
+    background-color: transparent;
   }
 
   button {
     @include button(10.3rem, 4.4rem);
+  }
+}
+
+@media (max-width: 1024px) {
+  .footer {
+    padding: 6rem 0;
+  }
+
+  .form-footer {
+    &__block {
+      flex-direction: column;
+    }
+  }
+}
+
+@media (max-width: 900px) {
+  .footer {
+    &__items {
+      flex-wrap: wrap;
+      align-items: start;
+      gap: 5rem;
+    }
+    &__info {
+      flex: 0 1 30%;
+    }
+    &__menu {
+      flex: 0 1 55%;
+    }
+  }
+
+  .menu-footer {
+    justify-content: space-between;
+  }
+
+  .menu-footer {
+    gap: 2rem;
+  }
+
+  .form-footer {
+    &__block {
+      flex-direction: row;
+    }
+  }
+}
+
+@media (max-width: 600px) {
+  .footer {
+    &__info {
+      flex: 0 1 100%;
+    }
+    &__menu {
+      flex: 0 1 80%;
+    }
+  }
+}
+
+@media (max-width: 375px) {
+  .footer {
+    &__menu {
+      flex: 0 1 100%;
+    }
+  }
+  .form-footer {
+    &__block {
+      flex-direction: column;
+    }
   }
 }
