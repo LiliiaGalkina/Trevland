@@ -1,21 +1,21 @@
 export const popularItems = [
   {
     id: 1,
-    imgurl: "/image/loc-turkey.png",
+    imgurl: "/Trevland/image/loc-turkey.png",
     imgalt: "Воздушные шары над Каппадокией",
     title: "Istanbul, Turkey",
     text: "Istanbul is a major city in Turkey that straddles Europe. ",
   },
   {
     id: 2,
-    imgurl: "/image/loc-korea.png",
+    imgurl: "/Trevland/image/loc-korea.png",
     imgalt: "фото Южной Кореи",
     title: "Seoul, South Korea",
     text: "South Korea officially the Republic of Korea is a country in East Asia.",
   },
   {
     id: 3,
-    imgurl: "/image/loc-malaysia.png",
+    imgurl: "/Trevland/image/loc-malaysia.png",
     imgalt: "Золотая статуя на фоне гор",
     title: "Kuala Lumpur, malaysia",
     text: "A 272-step long trek leads you to this century.",
@@ -25,7 +25,7 @@ export const popularItems = [
 export const specialOffersItems = [
   {
     id: 1,
-    imgurl: "/image/slider/usa.png",
+    imgurl: "/Trevland/image/slider/usa.png",
     imgalt: "статуя свободы на фоне небоскребов",
     title: "Statue of Liberty",
     country: "New York",
@@ -35,7 +35,7 @@ export const specialOffersItems = [
   },
   {
     id: 2,
-    imgurl: "/image/slider/great-wall.png",
+    imgurl: "/Trevland/image/slider/great-wall.png",
     imgalt: "великая китайская стена",
     title: "The Great Wall ",
     country: "China ",
@@ -45,7 +45,7 @@ export const specialOffersItems = [
   },
   {
     id: 3,
-    imgurl: "/image/slider/dizin.png",
+    imgurl: "/Trevland/image/slider/dizin.png",
     imgalt: "иранская деревня",
     title: "Dizin",
     country: "Iran",
@@ -55,7 +55,7 @@ export const specialOffersItems = [
   },
   {
     id: 4,
-    imgurl: "/image/slider/sajek.png",
+    imgurl: "/Trevland/image/slider/sajek.png",
     imgalt: "дом около океана",
     title: "Sajek Valley",
     country: "Bangladesh",
@@ -65,7 +65,7 @@ export const specialOffersItems = [
   },
   {
     id: 5,
-    imgurl: "/image/slider/osaka.png",
+    imgurl: "/Trevland/image/slider/osaka.png",
     imgalt: "замок в Осаке",
     title: "Osaka Castle",
     country: "Japan",
@@ -75,7 +75,7 @@ export const specialOffersItems = [
   },
   {
     id: 6,
-    imgurl: "/image/slider/usa.png",
+    imgurl: "/Trevland/image/slider/usa.png",
     imgalt: "статуя свободы на фоне небоскребов",
     title: "Statue of Liberty",
     country: "New York",
@@ -85,7 +85,7 @@ export const specialOffersItems = [
   },
   {
     id: 7,
-    imgurl: "/image/slider/great-wall.png",
+    imgurl: "/Trevland/image/slider/great-wall.png",
     imgalt: "великая китайская стена",
     title: "The Great Wall ",
     country: "China ",
@@ -95,7 +95,7 @@ export const specialOffersItems = [
   },
   {
     id: 8,
-    imgurl: "/image/slider/dizin.png",
+    imgurl: "/Trevland/image/slider/dizin.png",
     imgalt: "иранская деревня",
     title: "Dizin",
     country: "Iran",
@@ -105,7 +105,7 @@ export const specialOffersItems = [
   },
   {
     id: 9,
-    imgurl: "/image/slider/sajek.png",
+    imgurl: "/Trevland/image/slider/sajek.png",
     imgalt: "дом около океана",
     title: "Sajek Valley",
     country: "Bangladesh",
@@ -115,7 +115,7 @@ export const specialOffersItems = [
   },
   {
     id: 10,
-    imgurl: "/image/slider/osaka.png",
+    imgurl: "/Trevland/image/slider/osaka.png",
     imgalt: "замок в Осаке",
     title: "Osaka Castle",
     country: "Japan",
@@ -128,7 +128,7 @@ export const specialOffersItems = [
 export const newsItems = [
   {
     id: 1,
-    imgurl: "/image/news-banff.png",
+    imgurl: "/Trevland/image/news-banff.png",
     imgalt: "озеро, окруженное с одной стороны горами, с другой лесами",
     title: "Banff National Park",
     text: "Banff National Park lies in the heart of the majestic Rocky Mountains in the province of Alberta, and showcases some of Canada's most beautiful scenery. Turquoise-colored lakes, snow-capped peaks, and glaciers are all easily accessible.",
@@ -136,7 +136,7 @@ export const newsItems = [
   },
   {
     id: 2,
-    imgurl: "/image/news-hirosima.png",
+    imgurl: "/Trevland/image/news-hirosima.png",
     imgalt: "на берегу реки стоит полуразрушенное здание",
     title: "The Hiroshima Peace!",
     text: "It was formally opened to the public in August that year.",
@@ -144,7 +144,7 @@ export const newsItems = [
   },
   {
     id: 3,
-    imgurl: "/image/news-faithful.png",
+    imgurl: "/Trevland/image/news-faithful.png",
     imgalt: "вид на священный город в Индии",
     title: "The faithful prayers!",
     text: "A major pilgrimage center for Hindus, the holy city.",
@@ -152,10 +152,10 @@ export const newsItems = [
   },
   {
     id: 4,
-    imgurl: "public/image/news-waters.png",
+    imgurl: "/Trevland/image/news-waters.png",
     imgalt: "очень красивое озеро, окруженное горами",
     title: "Colourful waters!",
     text: "Forest-driven water and energy cycles are poorly.",
     link: "@jhon7leew",
-  }
+  },
 ];

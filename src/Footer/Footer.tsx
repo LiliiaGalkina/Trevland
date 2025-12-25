@@ -18,16 +18,16 @@ const Footer = () => {
             </div>
             <div className="info-footer__social social-footer">
               <a href="#" className="social-footer__item" target="blank">
-                <img src="/image/social/fb.svg" alt="facebook" />
+                <img src="/Trevland/image/social/fb.svg" alt="facebook" />
               </a>
               <a href="#" className="social-footer__item" target="blank">
-                <img src="/image/social/insta.svg" alt="instagram" />
+                <img src="/Trevland/image/social/insta.svg" alt="instagram" />
               </a>
               <a href="#" className="social-footer__item" target="blank">
-                <img src="/image/social/twitter.svg" alt="twitter" />
+                <img src="/Trevland/image/social/twitter.svg" alt="twitter" />
               </a>
               <a href="#" className="social-footer__item" target="blank">
-                <img src="/image/social/google.svg" alt="google" />
+                <img src="/Trevland/image/social/google.svg" alt="google" />
               </a>
             </div>
           </div>
@@ -88,9 +88,7 @@ const Footer = () => {
               <input
                 type="email"
                 value={email}
-                onChange={(e) => setEmail(e.target.value
-                    
-                )}
+                onChange={(e) => setEmail(e.target.value)}
                 className="form-footer__input"
                 required
                 placeholder="Email"

@@ -6,21 +6,21 @@ const Hero = () => {
       <div className="hero__fon">
         <div className="hero__fon-img">
           <img
-            src="/image/hero-fon.png"
+            src="/Trevland/image/hero-fon.png"
             alt="мужчина смотрит через фотоаппарат на темно-синее небо"
           />
         </div>
         <div className="hero__fon-dark">
-        <img
-          src="/image/hero.png"
-          alt="темно-серый прямоугольник для затемнения картинки"
-        />
+          <img
+            src="/Trevland/image/hero.png"
+            alt="темно-серый прямоугольник для затемнения картинки"
+          />
         </div>
       </div>
       <div className="container">
         <div className="hero__title-block">
           <h1 className="hero__title">
-            Railtrips To Here, <br/> There And Everywhere!
+            Railtrips To Here, <br /> There And Everywhere!
           </h1>
           <p className="hero__text">
             We all wish to start our year the best way possible and also
