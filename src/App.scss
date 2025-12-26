@@ -615,7 +615,7 @@ body {
   &__items {
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: start;
     gap: 2rem;
   }
 }
@@ -708,7 +708,6 @@ body {
   .footer {
     &__items {
       flex-wrap: wrap;
-      align-items: start;
       gap: 5rem;
     }
     &__info {
